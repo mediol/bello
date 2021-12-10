@@ -8,6 +8,7 @@ body {
     font-family: 'Work Sans', sans-serif;
     font-size: 19px;
     line-height: 30px;
+    color: #5A6482;
 }
 a {
     text-decoration: none;
@@ -31,9 +32,6 @@ h1,
 h2,
 h3 {
     color: #1D253C;
-}
-p {
-    color: #5A6482;
 }
 .uptitle {
     font-weight: 600;
@@ -208,6 +206,7 @@ h1 {
     position: relative;
     top: -42px;
     left: -60px;
+    z-index: 3;
     background: #fff;
     box-shadow: 3px 4px 34px rgba(66, 71, 77, 0.11);
     border-radius: 5px;
@@ -224,7 +223,11 @@ h1 {
     position: absolute;
     top: -35px;
     left: -45px;
-    z-index: -1;
+    z-index: 1;
+}
+.image-wrap img {
+    position: relative;
+    z-index: 2;
 }
 
 /* safe */
@@ -318,10 +321,59 @@ h1 {
 .how-it-works {
     padding-top: 120px;
     padding-bottom: 100px;
-    background: #363839;
     color: #ACB4BF;
+    background: url('../img/confetti.svg') top 48% right / 27% no-repeat;
+    background: url('../img/confetti.svg') top 46% right 12% / 18% no-repeat;
+    background-color: #363839;
+}
+.how-it-works .subtitle {
+    width: 730px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 .how-it-works h2,
 .how-it-works h3 {
     color: #fff;
+}
+.steps {
+    margin: 70px 0 30px;
+    display: flex;
+    background: url('../img/wave-dashed.svg') top 10px left 56% / 62% no-repeat;
+}
+.step {
+    padding: 0 60px;
+    font-size: 16px;
+    line-height: 26px;
+}
+.step-img {
+    position: relative;
+}
+.step-img::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: #5A6482;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 49%;
+}
+.step:nth-child(2) .step-img::after {
+    left: 37%;
+}
+.step:nth-child(3) .step-img::after {
+    left: 42%;
+}
+.step-img img {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+/* learning */
+.learning {
+    padding-top: 150px;
+    padding-bottom: 165px;
+    background: #F9F5F2;
 }
