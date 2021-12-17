@@ -20,6 +20,8 @@ ul {
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 .flex-container {
     display: flex;
@@ -46,6 +48,13 @@ h3 {
     line-height: 30px;
     margin-top: 26px;
     margin-bottom: 40px;
+}
+button {
+    transition: cursor .3s, box-shadow .3s;
+}
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #F46752;
 }
 
 /* header */
@@ -387,9 +396,12 @@ h1 {
     display: flex;
 }
 .info-item {
-    height: 320px;
+    height: 330px;
+    width: 25%;
     padding: 40px 20px 30px;
     margin-right: 20px;
+    font-size: 16px;
+    line-height: 19px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
@@ -401,4 +413,52 @@ h1 {
     font-weight: 600;
     font-size: 34px;
     line-height: 42px;
+}
+.sky {
+    background: rgba(169, 216, 255, 0.3);
+}
+.sky h3,
+.sky a {
+    color: #7CAFDD;
+}
+.sand {
+    background: rgba(255, 174, 104, 0.3);
+}
+.sand h3,
+.sand a {
+    color: #E79751;
+}
+.tomato {
+    background: rgba(250, 82, 64, 0.3);
+}
+.tomato h3,
+.tomato a {
+    color: #FA5240;
+}
+.bluegreen {
+    background: rgba(18, 111, 133, 0.3);
+}
+.bluegreen h3,
+.bluegreen a {
+    color: #126F85;
+}
+
+/* get-start */
+.get-start {
+    padding-top: 110px;
+    padding-bottom: 85px;
+    background: url('../img/boy.png') bottom right 25% / auto no-repeat;
+    background-color: #E5F3FE;
+    position: relative;
+}
+.get-start::before {
+    content: '';
+    width: 37%;
+    max-width: 100%;
+    height: 120%;
+    display: block;
+    background: url('../img/men.png') center bottom / contain no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 64px;
 }
